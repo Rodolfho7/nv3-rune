@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/nv3-rune",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

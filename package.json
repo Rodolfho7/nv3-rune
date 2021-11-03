@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "NODE_ENV=production ng build",
     "build:win": "set NODE_ENV=production&& ng build",
+    "deploy": "npm run build:win && firebase deploy",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
