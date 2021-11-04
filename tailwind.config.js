@@ -3,6 +3,7 @@ module.exports = {
     enabled: process.env.NODE_ENV === 'production',
     content: [
     './src/**/*.component.html',
+    './src/**/*.component.ts',
     './src/index.html'
     ],
     safelist: ['dark']
@@ -12,7 +13,9 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      fontWeight: ['hover']
+    },
   },
   plugins: [],
 }
