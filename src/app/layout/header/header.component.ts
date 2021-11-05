@@ -9,6 +9,7 @@ import { ThemeService } from '../../services/theme.service';
 export class HeaderComponent {
 
   darkChecked = false;
+  menuOpen = false;
 
   constructor(private readonly themeService: ThemeService) { }
 

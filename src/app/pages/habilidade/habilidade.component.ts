@@ -18,7 +18,6 @@ export class HabilidadeComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       this.skill = params.get('skill');
-      console.log(this.skill);
     });
   }
 }

@@ -15,7 +15,6 @@ export class CardComponent implements OnChanges {
   constructor() {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('change');
     if (changes.skill) {
       this.skillClasses = {
         'text-green-800': this.skill === 'farming' || this.skill === 'fletching',
