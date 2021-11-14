@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,9 +7,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./habilidade.component.scss']
 })
 export class HabilidadeComponent implements OnInit {
-
-  @Input() icone = '';
-  @Input() titulo = '';
 
   skill: string | null = '';
 
