@@ -1,18 +1,17 @@
 <div class="bg-white dark:bg-gray-900 text-black dark:text-gray-50 flex justify-between items-center px-4 py-2 fixed w-full">
   <a routerLink="/">
-    <div>
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 cursor-pointer" viewBox="0 0 233.5 185.49">
-        <g>
-          <polygon [attr.fill]="!darkChecked ? 'black' : 'white'" points="0,0 34.21,0 40.9,0 41.92,0 65.12,0 65.12,0 107.09,115.31 107.09,0 148,0 148,115.31 189.97,0 233.5,0 228.4,13.99 165.98,185.49 148,185.49 107.09,185.49 89.11,185.49 40.9,53.05 40.9,185.49 0,185.49 "/>
-        </g>
-      </svg>
-    </div>
+    <app-nv3-logo [darkChecked]="darkChecked"></app-nv3-logo>
   </a>
-  <nav class="sm:block transition">
-    <ul class="flex flex-col p-2 sm:p-0 sm:flex-row h-screen sm:w-auto sm:h-auto fixed top-14 sm:top-0 sm:left-0 sm:relative bg-white pl-4 dark:bg-gray-900 duration-300"
+  <nav class="sm:block transition absolute top-0 sm:static shadow-lg sm:shadow-none">
+    <ul class="flex flex-col p-2 sm:p-0 sm:flex-row h-screen sm:w-auto sm:h-auto fixed sm:top-0 sm:left-0 sm:relative bg-white pl-4 dark:bg-gray-900 duration-300 z-50 w-40"
       [ngClass]="{'left-0': menuOpen, '-left-full': !menuOpen}"
       (click)="menuOpen = !menuOpen"
     >
+      <li class="sm:hidden mb-4">
+        <a routerLink="/">
+          <app-nv3-logo [darkChecked]="darkChecked"></app-nv3-logo>
+        </a>
+      </li>
       <li class="cursor-pointer hover:font-bold hover:bg-gray-100 dark:hover:bg-gray-800 px-2 py-1 mr-2">
         <a routerLink="">Home</a>
       </li>
@@ -26,6 +25,8 @@
         <a href="#">Parceiros</a>
       </li>
     </ul>
+    <div class="w-screen h-screen bg-gray-400 bg-opacity-75 fixed top-0 left-0 z-40 sm:hidden" [ngClass]="{'hidden': !menuOpen}" (click)="menuOpen = !menuOpen">
+    </div>
   </nav>
   <div class="sm:hidden cursor-pointer" (click)="menuOpen = !menuOpen">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
