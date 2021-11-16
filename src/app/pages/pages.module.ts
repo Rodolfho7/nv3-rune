@@ -7,12 +7,16 @@ import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { InicialComponent } from './inicial/inicial.component';
 import { HabilidadeComponent } from './habilidade/habilidade.component';
 import { RouterModule } from '@angular/router';
+import { MembrosComponent } from './membros/membros.component';
+import { MembroComponent } from './membro/membro.component';
 
 @NgModule({
   declarations: [
     HabilidadesComponent,
     InicialComponent,
-    HabilidadeComponent
+    HabilidadeComponent,
+    MembrosComponent,
+    MembroComponent
   ],
   imports: [
     CommonModule,

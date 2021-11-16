@@ -1,0 +1,24 @@
+<div class="container mx-auto h-full">
+  <p class="font-bold py-3 rounded text-5xl text-center mb-4 bg-white dark:bg-gray-900">
+    Membros do clan
+  </p>
+
+  <ul class="space-y-4">
+    <li class="bg-gray-900 p-2 dark:bg-gray-400 text-white dark:text-gray-900 grid gap-1 grid-cols-3">
+      <h1 class="col-span-2">Nome</h1>
+      <p class="text-right">Experiência</p>
+    </li>
+    <li class="bg-white p-2 dark:bg-gray-900 cursor-pointer hover:opacity-50 flex items-center justify-between" *ngFor="let member of members?.members" (click)="showMember(member.name)">
+      <!-- [ngClass]="{'bg-yellow-500 dark:bg-yellow-400': member.rank === 'Owner'}" -->
+      <div class="flex items-center">
+        <img src="https://www.runeclan.com/images/chat_head.php?a={{member.name}}" alt="" class="w-9 h-9">
+        <p>
+          {{ member.name }}
+        </p>
+      </div>
+      <p>
+        {{ member.experience }}
+      </p>
+    </li>
+  </ul>
+</div>

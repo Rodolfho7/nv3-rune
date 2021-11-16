@@ -1,0 +1,274 @@
+{
+  "player": {
+    "name": "nv3_rodskill",
+    "activities": {
+      "bounty_hunters": {
+        "rank": -1,
+        "count": -1
+      },
+      "bh_rogues": {
+        "rank": -1,
+        "count": -1
+      },
+      "dominion_tower": {
+        "rank": -1,
+        "count": -1
+      },
+      "the_crucible": {
+        "rank": -1,
+        "count": -1
+      },
+      "castle_wars_games": {
+        "rank": -1,
+        "count": -1
+      },
+      "ba_attackers": {
+        "rank": -1,
+        "count": -1
+      },
+      "ba_defenders": {
+        "rank": -1,
+        "count": -1
+      },
+      "ba_collectors": {
+        "rank": -1,
+        "count": -1
+      },
+      "ba_healers": {
+        "rank": -1,
+        "count": -1
+      },
+      "duel_tournament": {
+        "rank": -1,
+        "count": -1
+      },
+      "mobilising_armies": {
+        "rank": -1,
+        "count": -1
+      },
+      "conquest": {
+        "rank": -1,
+        "count": -1
+      },
+      "fist_of_guthix": {
+        "rank": -1,
+        "count": -1
+      },
+      "gg_resource_race": {
+        "rank": -1,
+        "count": -1
+      },
+      "gg_athletics": {
+        "rank": -1,
+        "count": -1
+      },
+      "we2_armadyl_lifetime_contribution": {
+        "rank": -1,
+        "count": -1
+      },
+      "we2_bandos_lifetime_contribution": {
+        "rank": -1,
+        "count": -1
+      },
+      "we2_armadyl_pvp_kills": {
+        "rank": -1,
+        "count": -1
+      },
+      "we2_bandos_pvp_kills": {
+        "rank": -1,
+        "count": -1
+      },
+      "heist_guard_level": {
+        "rank": -1,
+        "count": -1
+      },
+      "heist_robber_level": {
+        "rank": -1,
+        "count": -1
+      },
+      "cfp_5_game_average": {
+        "rank": -1,
+        "count": -1
+      },
+      "af15_cow_tipping": {
+        "rank": -1,
+        "count": -1
+      },
+      "af15_rats_killed_after_the_miniquest": {
+        "rank": -1,
+        "count": -1
+      },
+      "runescore": {
+        "rank": 316766,
+        "count": 3155
+      },
+      "clue_scrolls_easy": {
+        "rank": 221004,
+        "count": 1
+      },
+      "clue_scrolls_medium": {
+        "rank": -1,
+        "count": -1
+      },
+      "clue_scrolls_hard": {
+        "rank": -1,
+        "count": -1
+      },
+      "clue_scrolls_elite": {
+        "rank": 238103,
+        "count": 1
+      },
+      "clue_scrolls_master": {
+        "rank": -1,
+        "count": -1
+      }
+    },
+    "skills": {
+      "overall": {
+        "rank": 417487,
+        "level": 1890,
+        "experience": 937026023
+      },
+      "attack": {
+        "rank": -1,
+        "level": 1,
+        "experience": -1
+      },
+      "defence": {
+        "rank": -1,
+        "level": 1,
+        "experience": -1
+      },
+      "strength": {
+        "rank": -1,
+        "level": 1,
+        "experience": -1
+      },
+      "constitution": {
+        "rank": -1,
+        "level": 1,
+        "experience": -1
+      },
+      "ranged": {
+        "rank": -1,
+        "level": 1,
+        "experience": -1
+      },
+      "prayer": {
+        "rank": -1,
+        "level": 1,
+        "experience": -1
+      },
+      "magic": {
+        "rank": -1,
+        "level": 1,
+        "experience": -1
+      },
+      "cooking": {
+        "rank": 354583,
+        "level": 82,
+        "experience": 2623233
+      },
+      "woodcutting": {
+        "rank": 20359,
+        "level": 99,
+        "experience": 37009889
+      },
+      "fletching": {
+        "rank": 470617,
+        "level": 74,
+        "experience": 1152636
+      },
+      "fishing": {
+        "rank": 11528,
+        "level": 99,
+        "experience": 109851585
+      },
+      "firemaking": {
+        "rank": 76594,
+        "level": 99,
+        "experience": 17616752
+      },
+      "crafting": {
+        "rank": 14045,
+        "level": 99,
+        "experience": 58270274
+      },
+      "smithing": {
+        "rank": 13077,
+        "level": 99,
+        "experience": 104272528
+      },
+      "mining": {
+        "rank": 5034,
+        "level": 99,
+        "experience": 181672642
+      },
+      "herblore": {
+        "rank": 368653,
+        "level": 76,
+        "experience": 1443044
+      },
+      "agility": {
+        "rank": 34678,
+        "level": 99,
+        "experience": 24424926
+      },
+      "thieving": {
+        "rank": 439423,
+        "level": 62,
+        "experience": 335410
+      },
+      "slayer": {
+        "rank": 63411,
+        "level": 114,
+        "experience": 59038955
+      },
+      "farming": {
+        "rank": 9889,
+        "level": 120,
+        "experience": 200000000
+      },
+      "runecrafting": {
+        "rank": 24618,
+        "level": 99,
+        "experience": 23538468
+      },
+      "hunter": {
+        "rank": 59887,
+        "level": 99,
+        "experience": 19046620
+      },
+      "construction": {
+        "rank": 50431,
+        "level": 99,
+        "experience": 18155682
+      },
+      "summoning": {
+        "rank": -1,
+        "level": 1,
+        "experience": -1
+      },
+      "dungeoneering": {
+        "rank": 322611,
+        "level": 81,
+        "experience": 2206232
+      },
+      "divination": {
+        "rank": 222440,
+        "level": 86,
+        "experience": 3924485
+      },
+      "invention": {
+        "rank": 105699,
+        "level": 116,
+        "experience": 71479081
+      },
+      "archaeology": {
+        "rank": 184096,
+        "level": 72,
+        "experience": 962260
+      }
+    }
+  }
+}
