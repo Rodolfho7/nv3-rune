@@ -4,21 +4,21 @@
   </p>
 
   <ul class="space-y-4">
-    <li class="bg-gray-900 p-2 dark:bg-gray-400 text-white dark:text-gray-900 grid gap-1 grid-cols-3">
+    <li class="bg-gray-900 p-2 dark:bg-gray-400 text-white dark:text-gray-900 grid gap-1 grid-cols-4">
       <h1 class="col-span-2">Nome</h1>
+      <p>Rank</p>
       <p class="text-right">Experiência</p>
     </li>
-    <li class="bg-white p-2 dark:bg-gray-900 cursor-pointer hover:opacity-50 flex items-center justify-between" *ngFor="let member of members?.members" (click)="showMember(member.name)">
+    <li class="bg-white p-2 dark:bg-gray-900 cursor-pointer hover:opacity-50 grid gap-1 grid-cols-4 items-center" *ngFor="let member of members?.members" (click)="showMember(member.name)">
       <!-- [ngClass]="{'bg-yellow-500 dark:bg-yellow-400': member.rank === 'Owner'}" -->
-      <div class="flex items-center">
+      <div class="flex items-center col-span-2">
         <img src="https://www.runeclan.com/images/chat_head.php?a={{member.name}}" alt="" class="w-9 h-9">
         <p>
           {{ member.name }}
         </p>
       </div>
-      <p>
-        {{ member.experience }}
-      </p>
+      <p>{{ member.rank }}</p>
+      <p class="text-right">{{ member.experience }}</p>
     </li>
   </ul>
 </div>
