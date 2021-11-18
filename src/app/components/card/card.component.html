@@ -5,14 +5,23 @@
       {{ skill }}
     </p>
   </div>
-  <div class="text-center font-bold text-5xl mb-6">
+  <div class="text-center font-bold text-4xl mb-6">
     <h1>{{titulo}}</h1>
   </div>
-  <div class="mb-8 flex justify-center">
+  <!-- <div class="mb-8 flex justify-center">
     <img src="https://runescape.wiki/images/Elder_God_Wars_Dungeon-_The_TzekHaar_Front_%285%29_update_image.jpg?6a536" alt="">
   </div>
   <div class="space-y-3">
     <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum distinctio voluptates illo sint magni quod eius, eos similique asperiores, consequuntur ratione architecto facere veniam velit. Doloremque eveniet molestias ratione ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptas sed, dolor accusamus nemo labore nostrum explicabo! Maiores amet corrupti eveniet impedit praesentium repellat, obcaecati doloribus velit doloremque distinctio cumque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora impedit fugiat quam quasi laudantium nostrum ipsam doloremque incidunt, nesciunt ipsum quisquam omnis! Maiores ipsa molestias eveniet mollitia quibusdam harum voluptatem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae non sint expedita quos quis provident incidunt illum natus, perspiciatis harum libero reprehenderit saepe quidem similique nostrum minima esse nemo eius.</p>
     <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum distinctio voluptates illo sint magni quod eius, eos similique asperiores, consequuntur ratione architecto facere veniam velit. Doloremque eveniet molestias ratione ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptas sed, dolor accusamus nemo labore nostrum explicabo! Maiores amet corrupti eveniet impedit praesentium repellat, obcaecati doloribus velit doloremque distinctio cumque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora impedit fugiat quam quasi laudantium nostrum ipsam doloremque incidunt, nesciunt ipsum quisquam omnis! Maiores ipsa molestias eveniet mollitia quibusdam harum voluptatem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae non sint expedita quos quis provident incidunt illum natus, perspiciatis harum libero reprehenderit saepe quidem similique nostrum minima esse nemo eius.</p>
+  </div> -->
+
+  <div class="mt-12">
+    <ng-container *ngFor="let item of texto.blocks">
+      <app-editor-text-header *ngIf="item.type === 'header'" [item]="item"></app-editor-text-header>
+      <app-editor-text-paragraph *ngIf="item.type === 'paragraph'" [item]="item"></app-editor-text-paragraph>
+      <app-editor-image *ngIf="item.type === 'image'" [item]="item"></app-editor-image>
+      <app-editor-list *ngIf="item.type === 'list'" [item]="item"></app-editor-list>
+    </ng-container>
   </div>
 </div>
