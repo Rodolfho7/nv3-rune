@@ -6,6 +6,8 @@ import { InicialComponent } from './pages/inicial/inicial.component';
 import { MembrosComponent } from './pages/membros/membros.component';
 import { MembroComponent } from './pages/membro/membro.component';
 
+import { EditorHabilidadesComponent } from './pages/api/editor-habilidades/editor-habilidades.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -26,6 +28,10 @@ const routes: Routes = [
   {
     path: 'membro/:name',
     component: MembroComponent
+  },
+  {
+    path:'api/habilidades',
+    component: EditorHabilidadesComponent
   }
 ];
 

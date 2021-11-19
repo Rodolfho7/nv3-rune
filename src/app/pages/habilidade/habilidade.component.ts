@@ -10,7 +10,9 @@ export class HabilidadeComponent implements OnInit {
 
   skill: string | null = '';
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {

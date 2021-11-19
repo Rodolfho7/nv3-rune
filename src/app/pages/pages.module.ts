@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { ComponentsModule } from '../components/components.module';
 
@@ -9,6 +10,7 @@ import { HabilidadeComponent } from './habilidade/habilidade.component';
 import { RouterModule } from '@angular/router';
 import { MembrosComponent } from './membros/membros.component';
 import { MembroComponent } from './membro/membro.component';
+import { EditorHabilidadesComponent } from './api/editor-habilidades/editor-habilidades.component';
 
 @NgModule({
   declarations: [
@@ -16,17 +18,20 @@ import { MembroComponent } from './membro/membro.component';
     InicialComponent,
     HabilidadeComponent,
     MembrosComponent,
-    MembroComponent
+    MembroComponent,
+    EditorHabilidadesComponent
   ],
   imports: [
     CommonModule,
     ComponentsModule,
+    FormsModule,
     RouterModule
   ],
   exports: [
     HabilidadesComponent,
     InicialComponent,
-    HabilidadeComponent
+    HabilidadeComponent,
+    EditorHabilidadesComponent
   ]
 })
 export class PagesModule { }
