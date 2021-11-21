@@ -10,6 +10,7 @@ import { PagesModule } from './pages/pages.module';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     HttpClientModule,
     AngularFirestoreModule,
+    AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],

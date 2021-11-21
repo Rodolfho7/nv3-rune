@@ -1,5 +1,9 @@
-<div id="editorjs" class="bg-white"></div>
-<select [(ngModel)]="skillSelected" class="px-4 py-2">
-  <option [value]="skill" *ngFor="let skill of skillList">{{skill}}</option>
-</select>
-<button class="px-4 py-2 bg-green-800 text-white shadow-md rounded-md" (click)="save()">Save</button>
+
+<div class="p-4">
+  <p>Selecione uma skill antes de criar:</p>
+  <select [(ngModel)]="skillSelected" class="px-4 py-2 bg-gray-700 dark:bg-gray-300 text-gray-200 dark:text-gray-700 rounded mr-2" (change)="updateData()">
+    <option [value]="skill" *ngFor="let skill of skillList">{{skill}}</option>
+  </select>
+  <button class="px-4 py-2 bg-green-800 text-white shadow-md rounded-md" (click)="save()">Save</button>
+</div>
+<div id="editorjs" class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300 sm:px-0 px-4"></div>
