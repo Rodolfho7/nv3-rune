@@ -17,7 +17,28 @@ export class EditorHabilidadesComponent implements AfterViewInit {
 
   editor!: EditorJS;
   skillSelected!: string;
-  skillList = ['agility', 'archaeology', 'cooking', 'crafting', 'divination', 'dungeoneering', 'farming', 'firemaking', 'fishing', 'fletching', 'woodcutting'];
+  skillList = [
+    'agility',
+    'archaeology',
+    'construction',
+    'cooking',
+    'crafting',
+    'divination',
+    'dungeoneering',
+    'farming',
+    'firemaking',
+    'fishing',
+    'fletching',
+    'herblore',
+    'hunter',
+    'invention',
+    'mining',
+    'runecrafting',
+    'slayer',
+    'smithing',
+    'thieving',
+    'woodcutting'
+  ];
 
   constructor(
     private firestore: AngularFirestore,
