@@ -14,7 +14,6 @@ module.exports = {
   },
   variants: {
     extend: {
-      fontWeight: ['hover'],
       hover: ['dark']
     },
   },

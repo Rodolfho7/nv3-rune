@@ -1,3 +1,5 @@
-<h1 *ngIf="item.data.level === 1" class="font-bold text-3xl mb-4">{{ item.data.text }}</h1>
-<h1 *ngIf="item.data.level === 2" class="font-bold text-2xl mb-4">{{ item.data.text }}</h1>
-<h1 *ngIf="item.data.level > 2" class="font-bold text-xl mb-4">{{ item.data.text }}</h1>
+<div class="px-4 dark:text-gray-50 text-gray-800">
+  <h1 *ngIf="item.data.level === 1" class="font-bold text-3xl mb-4">{{ item.data.text }}</h1>
+  <h1 *ngIf="item.data.level === 2" class="font-bold text-2xl mb-4">{{ item.data.text }}</h1>
+  <h1 *ngIf="item.data.level > 2" class="font-bold text-xl mb-4">{{ item.data.text }}</h1>
+</div>

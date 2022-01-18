@@ -1,10 +1,11 @@
 <div class="container mx-auto h-full mb-4">
-  <p class="font-bold py-3 rounded text-5xl text-center mb-4 bg-white dark:bg-gray-900 flex items-center shadow-md">
-    <img src="https://www.runeclan.com/images/chat_head.php?a={{membro?.player?.name}}" alt="">
+  <img src="https://www.runeclan.com/images/chat_head.php?a={{membro?.player?.name}}" alt=""
+    class="rounded-full border-4 border-gray-900 dark:border-white mx-auto w-32 h-32 relative -bottom-16 dark:bg-white bg-gray-900">
+  <p class="font-bold py-3 rounded text-5xl text-center mb-4 bg-white dark:bg-gray-900 shadow-md pt-16">
     {{ membro?.player?.name }}
   </p>
 
-  <ul class="space-y-2 px-2">
+  <ul class="space-y-2 px-2 sm:px-0">
     <li class="bg-gray-900 p-1 dark:bg-gray-400 text-white dark:text-gray-900 grid gap-1 grid-cols-4">
       <h1 class="col-span-2">Nome</h1>
       <p>Experiência</p>

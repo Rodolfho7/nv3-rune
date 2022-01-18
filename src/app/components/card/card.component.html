@@ -1,6 +1,6 @@
 <div class="w-full bg-white dark:bg-gray-700 p-4 rounded-md mb-4 shadow-md">
   <div class="flex flex-col items-center space-x-2 mb-4 w-min sm:absolute text-center">
-    <img class="h-9 w-9 cursor-pointer" src='assets/skills-icons/{{skill}}.png' alt="">
+    <img class="h-9 w-9" src='assets/skills-icons/{{skill}}.png' alt="">
     <p class="font-bold px-2 py-1 rounded" [ngClass]="skillClasses">
       {{ skill }}
     </p>
@@ -10,13 +10,11 @@
   </div>
 </div>
 
-<div class="w-full bg-white dark:bg-gray-700 p-4 rounded-md mb-4 shadow-md">
-  <div class="mt-12">
-    <ng-container *ngFor="let item of texto.blocks">
-      <app-editor-text-header *ngIf="item.type === 'header'" [item]="item"></app-editor-text-header>
-      <app-editor-text-paragraph *ngIf="item.type === 'paragraph'" [item]="item"></app-editor-text-paragraph>
-      <app-editor-image *ngIf="item.type === 'image'" [item]="item"></app-editor-image>
-      <app-editor-list *ngIf="item.type === 'list'" [item]="item"></app-editor-list>
-    </ng-container>
-  </div>
+<div class="w-full bg-white dark:bg-gray-700 rounded-md mb-4 shadow-md pb-4">
+  <ng-container *ngFor="let item of texto.blocks">
+    <app-editor-text-header *ngIf="item.type === 'header'" [item]="item"></app-editor-text-header>
+    <app-editor-text-paragraph *ngIf="item.type === 'paragraph'" [item]="item"></app-editor-text-paragraph>
+    <app-editor-image *ngIf="item.type === 'image'" [item]="item"></app-editor-image>
+    <app-editor-list *ngIf="item.type === 'list'" [item]="item"></app-editor-list>
+  </ng-container>
 </div>
