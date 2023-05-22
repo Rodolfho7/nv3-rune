@@ -2,10 +2,10 @@ import { AfterViewInit, Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 
-import EditorJS from '@editorjs/editorjs';
-import Header from '@editorjs/header';
-import ImageTool from '@editorjs/image';
-import List from '@editorjs/list';
+// import EditorJS from '@editorjs/editorjs';
+// import Header from '@editorjs/header';
+// import ImageTool from '@editorjs/image';
+// import List from '@editorjs/list';
 
 
 @Component({
@@ -15,7 +15,7 @@ import List from '@editorjs/list';
 })
 export class EditorHabilidadesComponent implements AfterViewInit {
 
-  editor!: EditorJS;
+  // editor!: EditorJS;
   skillSelected!: string;
   skillList = [
     'agility',
@@ -46,31 +46,31 @@ export class EditorHabilidadesComponent implements AfterViewInit {
   ) { }
 
   ngAfterViewInit(): void {
-    this.editor = new EditorJS({
-      tools: {
-        header: Header,
-        list: List,
-        image: {
-          class: ImageTool,
-          config: {
-            uploader: {
-              uploadByFile:(file: any) => {
-                return this.saveImage(file);
-              }
-            }
-          }
-        }
-      },
-    });
+    // this.editor = new EditorJS({
+    //   tools: {
+    //     header: Header,
+    //     list: List,
+    //     image: {
+    //       class: ImageTool,
+    //       config: {
+    //         uploader: {
+    //           uploadByFile:(file: any) => {
+    //             return this.saveImage(file);
+    //           }
+    //         }
+    //       }
+    //     }
+    //   },
+    // });
   }
 
   save(): void {
-    this.editor.save().then(async (result) => {
-      const data = JSON.stringify(result).replace('<br>', '');
-      await this.firestore.collection('habilidades').doc(this.skillSelected).set({
-        text: data
-      });
-    });
+    // this.editor.save().then(async (result) => {
+    //   const data = JSON.stringify(result).replace('<br>', '');
+    //   await this.firestore.collection('habilidades').doc(this.skillSelected).set({
+    //     text: data
+    //   });
+    // });
   }
 
   saveImage(file: any) {
@@ -97,24 +97,24 @@ export class EditorHabilidadesComponent implements AfterViewInit {
         data = undefined;
       }
       
-      this.editor.destroy();
-      this.editor = new EditorJS({
-        tools: {
-          header: Header,
-          list: List,
-          image: {
-            class: ImageTool,
-            config: {
-              uploader: {
-                uploadByFile:(file: any) => {
-                  return this.saveImage(file);
-                }
-              }
-            }
-          }
-        },
-        data: data
-      });
+      // this.editor.destroy();
+      // this.editor = new EditorJS({
+      //   tools: {
+      //     header: Header,
+      //     list: List,
+      //     image: {
+      //       class: ImageTool,
+      //       config: {
+      //         uploader: {
+      //           uploadByFile:(file: any) => {
+      //             return this.saveImage(file);
+      //           }
+      //         }
+      //       }
+      //     }
+      //   },
+      //   data: data
+      // });
     });
   }
 }

@@ -1,5 +1,5 @@
 <div class="container mx-auto h-full mb-4">
-  <img src="https://runepixels.com:5001/m=avatar-rs/{{membro.name}}/chat.png" alt=""
+  <img *ngIf="membro" src="https://runepixels.com:5001/m=avatar-rs/{{membro?.name}}/chat.png" alt=""
     class="rounded-full border-4 border-gray-900 dark:border-white mx-auto w-32 h-32 relative -bottom-16 dark:bg-white bg-gray-900">
   <p class="font-bold py-3 rounded text-5xl text-center mb-4 bg-white dark:bg-gray-900 shadow-md pt-16">
     {{ membro?.name }}
