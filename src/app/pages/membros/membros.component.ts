@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Clan } from '../../core/interfaces/clan';
 import { ClanService } from '../../services/clan.service';
+import { Member } from 'src/app/core/interfaces/clan';
 
 @Component({
   selector: 'app-membros',
@@ -10,7 +10,7 @@ import { ClanService } from '../../services/clan.service';
 })
 export class MembrosComponent implements OnInit {
 
-  members!: Clan;
+  members!: Member[];
 
   constructor(
     private router: Router,
@@ -18,7 +18,7 @@ export class MembrosComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.clanService.runeClanMembers('nivel 3').subscribe((res) => {
+    this.clanService.runeClanMembers().subscribe((res) => {
       this.members = res;
     });
   }

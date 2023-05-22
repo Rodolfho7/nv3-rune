@@ -1,18 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Clan } from '../core/interfaces/clan';
+import { Member } from '../core/interfaces/clan';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClanService {
 
-  private baseUrl = 'https://runescape-clan-api.herokuapp.com/clan';
+  private baseUrl = 'https://runepixels.com:5000/clans/2449/list?playertype=0&playersubtype=0';
 
   constructor(private httpClient: HttpClient) { }
 
-  runeClanMembers(clanName: string): Observable<Clan> {
-    return this.httpClient.get<Clan>(`${this.baseUrl}/${clanName}`);
+  runeClanMembers(): Observable<Member[]> {
+    return this.httpClient.get<Member[]>(`${this.baseUrl}`);
   }
 }

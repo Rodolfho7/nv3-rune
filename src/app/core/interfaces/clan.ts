@@ -1,10 +1,6 @@
-type Members = {
+export type Member = {
   name: string;
   rank: string;
-  experience: number;
+  xp: number;
   kills: number;
-}
-
-export interface Clan {
-  members: Members[]
 }

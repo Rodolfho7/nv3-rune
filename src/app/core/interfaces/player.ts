@@ -2,10 +2,12 @@ interface Activities {
 
 }
 
-interface Skill {
+export interface Skill {
+  id: number;
   rank: number;
   level: number;
-  experience: number;
+  virtualLevel: number;
+  xp: number;
 }
 
 export interface Skills {
@@ -41,9 +43,7 @@ export interface Skills {
 }
 
 export interface Player {
-  player: {
-    name: string;
-    activities: Activities;
-    skills: Skills;
-  }
+  name: string;
+  // activities: Activities;
+  skills: Skill[];
 }

@@ -1,8 +1,8 @@
 <div class="container mx-auto h-full mb-4">
-  <img src="https://www.runeclan.com/images/chat_head.php?a={{membro?.player?.name}}" alt=""
+  <img src="https://runepixels.com:5001/m=avatar-rs/{{membro.name}}/chat.png" alt=""
     class="rounded-full border-4 border-gray-900 dark:border-white mx-auto w-32 h-32 relative -bottom-16 dark:bg-white bg-gray-900">
   <p class="font-bold py-3 rounded text-5xl text-center mb-4 bg-white dark:bg-gray-900 shadow-md pt-16">
-    {{ membro?.player?.name }}
+    {{ membro?.name }}
   </p>
 
   <ul class="space-y-2 px-2 sm:px-0">
@@ -11,23 +11,23 @@
       <p>Experiência</p>
       <p class="text-right">Level</p>
     </li>
-    <ng-container *ngFor="let skill of skills">
+    <ng-container *ngFor="let skill of membro?.skills">
       <li class="bg-white p-1 dark:bg-gray-900 grid gap-1 grid-cols-4 hover:opacity-70"
-      [ngClass]="{'border-2': skill.experience > 104273167 && skill.name !== 'overall', 'border-yellow-500': skill.experience > 104273167 && skill.name !== 'overall', 'border-blue-500': skill.experience >= 200000000 && skill.name !== 'overall'}">
+      [ngClass]="{'border-2': skill.xp > 104273167, 'border-yellow-500': skill.xp > 104273167, 'border-blue-500': skill.xp >= 200000000}">
         <div class="flex col-span-2">
-          <img src="assets/skills-icons/{{skill.name}}.png" alt="" class="w-7 h-7">
-          <h1>{{ skill.name }}</h1>
+          <!-- <img src="assets/skills-icons/{{skill.id}}.png" alt="" class="w-7 h-7"> -->
+          <h1>{{ skill.id }}</h1>
         </div>
-        <p>{{ skill.experience }}</p>
+        <p>{{ skill.xp | number }}</p>
         <div class="flex justify-end">
-          <p *ngIf="skill.experience > 104273167 && skill.name !== 'overall'">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"
-            [ngClass]="{'text-yellow-400': skill.experience > 104273167, 'text-blue-400': skill.experience >= 200000000}"
+          <p *ngIf="skill.xp > 104273167">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor"
+            [ngClass]="{'text-blue-400': skill.xp >= 200000000}"
             >
               <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd" />
             </svg>
           </p>
-          <p class="text-right">{{ skill.level }}</p>
+          <p class="text-right">{{ skill.virtualLevel }}</p>
         </div>
       </li>
     </ng-container>

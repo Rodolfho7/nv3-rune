@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Player } from '../../core/interfaces/player';
+import { Player, Skill } from '../../core/interfaces/player';
 import { RankService } from '../../services/rank.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class MembroComponent implements OnInit {
 
   membro!: Player;
 
-  skills: any[] = [];
+  skills: Skill[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -30,8 +30,10 @@ export class MembroComponent implements OnInit {
 
   loadPlayer(name: string): void {
     this.rankService.runeRankUser(name).subscribe((player) => {
+      console.log(player);
       this.membro = player;
-      this.converteSkillsArray(player.player.skills);
+      // this.skills = player.skills;
+      // this.converteSkillsArray(player.skills);
     });
   }
 
