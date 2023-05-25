@@ -11,6 +11,9 @@ import { Member } from 'src/app/core/interfaces/clan';
 export class MembrosComponent implements OnInit {
 
   members: Member[] = [];
+  carregando = false;
+  erro = false;
+  errorMessage = '';
 
   constructor(
     private router: Router,
@@ -18,9 +21,15 @@ export class MembrosComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.carregando = true;
+    this.erro = false;
     this.clanService.runeClanMembers().subscribe((res) => {
-      
-      this.members = res;
+      this.members = res
+      this.carregando = false;
+    }, (err) => {
+      this.erro = true;
+      this.errorMessage = err.error.erro;
+      this.carregando = false;
     });
   }
 

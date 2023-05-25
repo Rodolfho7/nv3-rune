@@ -13,6 +13,9 @@ export class MembroComponent {
   membro: Player | undefined = undefined;
   totalXP = 0;
   name: string = '';
+  carregando = false;
+  erro = false;
+  errorMessage = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -21,6 +24,8 @@ export class MembroComponent {
     this.route.paramMap.subscribe((params: any) => {
       this.name = params.get('name');
       if (this.name) {
+        this.carregando = true;
+        this.erro = false;
         this.loadPlayer(this.name);
       }
     });
@@ -29,6 +34,11 @@ export class MembroComponent {
   loadPlayer(name: string): void {
     this.rankService.runeRankUser(name).subscribe((player) => {
       this.membro = player;
+      this.carregando = false;
+    }, (err) => {
+      this.erro = true;
+      this.errorMessage = err.error.erro;
+      this.carregando = false;
     });
   }
 }
