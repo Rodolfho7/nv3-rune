@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  baseUrl: 'https://rigorous-fresh-silk.glitch.me',
   firebaseConfig: {
     apiKey: "AIzaSyAIaFU489J60pSkC0WeC210zyxihsAV8XE",
     authDomain: "clan-nivel-3.firebaseapp.com",

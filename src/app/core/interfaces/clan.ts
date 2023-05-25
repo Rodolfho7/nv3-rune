@@ -1,6 +1,6 @@
 export type Member = {
   name: string;
   rank: string;
-  xp: number;
+  experience: number;
   kills: number;
 }

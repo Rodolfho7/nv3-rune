@@ -10,7 +10,7 @@ import { Member } from 'src/app/core/interfaces/clan';
 })
 export class MembrosComponent implements OnInit {
 
-  members!: Member[];
+  members: Member[] = [];
 
   constructor(
     private router: Router,
@@ -19,6 +19,7 @@ export class MembrosComponent implements OnInit {
 
   ngOnInit(): void {
     this.clanService.runeClanMembers().subscribe((res) => {
+      
       this.members = res;
     });
   }

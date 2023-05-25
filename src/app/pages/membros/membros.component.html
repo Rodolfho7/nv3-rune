@@ -9,7 +9,7 @@
       <p>Rank</p>
       <p class="text-right">Experiência</p>
     </li>
-    <ng-container *ngIf="members else loading">
+    <ng-container *ngIf="members.length else loading">
       <li class="bg-white p-2 dark:bg-gray-900 cursor-pointer hover:opacity-90 hover:shadow-none grid gap-1 grid-cols-4 items-center shadow-md" *ngFor="let member of members" (click)="showMember(member.name)">
         <!-- [ngClass]="{'bg-yellow-500 dark:bg-yellow-400': member.rank === 'Owner'}" -->
         <div class="flex items-center col-span-2">
@@ -19,11 +19,13 @@
           </p>
         </div>
         <p>{{ member.rank }}</p>
-        <p class="text-right">{{ member.xp | number }}</p>
+        <p class="text-right">{{ member.experience | number }}</p>
       </li>
     </ng-container>
     <ng-template #loading>
-      <div class="custom-loader"></div>
+      <div class="flex justify-center">
+        <div class="custom-loader border-8 border-y-gray-800 border-x-white text-center"></div>
+      </div>
     </ng-template>
   </ul>
 </div>
